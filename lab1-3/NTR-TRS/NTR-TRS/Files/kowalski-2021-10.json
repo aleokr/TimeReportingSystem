@@ -1,0 +1,98 @@
+{
+  "Frozen": true,
+  "Entries": [
+    {
+      "Id": null,
+      "Date": "2021-10-30",
+      "Code": "ALFA",
+      "Subcode": "database",
+      "Time": 45,
+      "Description": "data import",
+      "CanEdit": false,
+      "Accepted": false
+    },
+    {
+      "Id": null,
+      "Date": "2021-10-30",
+      "Code": "BETA",
+      "Subcode": "",
+      "Time": 397,
+      "Description": "picie kawy",
+      "CanEdit": false,
+      "Accepted": true
+    },
+    {
+      "Id": null,
+      "Date": "2021-10-08",
+      "Code": "ALFA",
+      "Subcode": "",
+      "Time": 45,
+      "Description": "kompilacja",
+      "CanEdit": false,
+      "Accepted": false
+    },
+    {
+      "Id": null,
+      "Date": "2021-10-08",
+      "Code": "BETA",
+      "Subcode": "",
+      "Time": 397,
+      "Description": "office arrangement",
+      "CanEdit": false,
+      "Accepted": true
+    },
+    {
+      "Id": null,
+      "Date": "2021-10-12",
+      "Code": "ALFA",
+      "Subcode": null,
+      "Time": 45,
+      "Description": "project meeting",
+      "CanEdit": false,
+      "Accepted": false
+    },
+    {
+      "Id": "31.10.2021 20:50:27",
+      "Date": "2021-10-31",
+      "Code": "BETA",
+      "Subcode": null,
+      "Time": 397,
+      "Description": "rtr",
+      "CanEdit": false,
+      "Accepted": true
+    },
+    {
+      "Id": "31.10.2021 20:50:52",
+      "Date": "2021-10-31",
+      "Code": "BETA",
+      "Subcode": " app",
+      "Time": 397,
+      "Description": "oo",
+      "CanEdit": false,
+      "Accepted": true
+    }
+  ],
+  "Accepted": [
+    {
+      "Id": null,
+      "Date": null,
+      "Code": "ALFA",
+      "Subcode": null,
+      "Time": 100,
+      "Description": null,
+      "CanEdit": false,
+      "Accepted": false
+    },
+    {
+      "Id": null,
+      "Date": "2021-10",
+      "Code": "BETA",
+      "Subcode": null,
+      "Time": 397,
+      "Description": null,
+      "CanEdit": false,
+      "Accepted": false
+    }
+  ],
+  "Date": "2021-10-01T00:00:00"
+}

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<NTR_TRS.Models.User>
+
+@{
+    ViewBag.Title = "Projects";
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+    <h5>Artists:</h5>
+    <div>
+        <ul>
+            @foreach (var project in Model)
+            {
+                <text><!-- @project.Name --></text>
+                <li>@project.Name: @project.Name</li>
+            }
+        </ul>
+    </div>
+</div>

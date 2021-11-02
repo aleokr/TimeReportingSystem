@@ -1,0 +1,29 @@
+﻿@model IEnumerable<NTR_TRS.Models.User>
+
+    <head>
+        <link rel="stylesheet" href="~/css/table.css" />
+    </head>
+    <div class="main-body">
+        @if (Model != null)
+        {
+        <table class="styled-table">
+            <thead>
+            <thead>
+                <tr>
+                    <th>Choose user</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                <tr>
+                    <td>
+                        <a asp-area="" asp-controller="Home" asp-action="Index" asp-route-username=@user.Name>@user.Name</a>
+                    </td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+        }
+    </div>

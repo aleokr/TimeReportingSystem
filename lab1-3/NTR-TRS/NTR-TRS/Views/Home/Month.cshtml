@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@await Html.PartialAsync("../Shared/Menu.cshtml")
+@model NTR_TRS.Models.MonthModelData
+
+
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+    <script src="~/scripts/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" />
+</head>
+<a class="action-button" asp-area="" asp-controller="Activity" asp-action="Add">ADD ACTIVITY</a>
+@if (!Model.Frozen)
+{
+    <a class="action-button" asp-area="" asp-controller="Activity" asp-action="Submit" asp-route-date=@Model.Date>SUBMIT MONTH</a>
+}
+<h5>Choose date:</h5>
+<form asp-controller="Home" asp-action="Month">
+    <input class="date text-box single-line" type="date" text=@Model.Date asp-for="Date" />
+    <button class="action-button" type="submit">SEARCH</button>
+</form>
+
+
+@if (Model != null && Model.ProjectActivities.Count != 0)
+{
+    <h3>Your entries</h3>
+    @foreach (ProjectActivity project in Model.ProjectActivities)
+    {
+        <h4>@project.Code</h4>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Subcode</th>
+                    <th>Time</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var activity in project.Entries)
+                {
+                    <tr>
+                        <td>@activity.Date</td>
+                        <td>@activity.Subcode</td>
+                        <td>@activity.Time</td>
+                        <td>@activity.Description</td>
+                        <td>
+                            @if (activity.CanEdit)
+                            {
+                                <a class="action-button" asp-area="" asp-controller="Activity" asp-action="Delete" asp-route-id=@activity.Id asp-route-type="Month" asp-route-date="">DELETE</a>
+                            }
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    }
+
+}
+
+
+
+
+@if (Model != null && Model.Accepted.Count != 0)
+{
+    <h3>Accepted activities</h3>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Code</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var activity in Model.Accepted)
+            {
+                <tr>
+                    <td>@activity.Date</td>
+                    <td>@activity.Code</td>
+                    <td>@activity.Time</td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+}
+
+        </div>

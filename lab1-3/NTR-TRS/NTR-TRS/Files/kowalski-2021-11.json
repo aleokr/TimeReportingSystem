@@ -1,0 +1,48 @@
+{
+  "Frozen": true,
+  "Entries": [
+    {
+      "Id": null,
+      "Date": "2021-11-08",
+      "Code": "BETA",
+      "Subcode": "",
+      "Time": 122,
+      "Description": "office arrangement",
+      "CanEdit": false,
+      "Accepted": true
+    },
+    {
+      "Id": null,
+      "Date": "2021-11-12",
+      "Code": "ALFA",
+      "Subcode": null,
+      "Time": 45,
+      "Description": "project meeting",
+      "CanEdit": false,
+      "Accepted": false
+    }
+  ],
+  "Accepted": [
+    {
+      "Id": null,
+      "Date": null,
+      "Code": "ALFA",
+      "Subcode": null,
+      "Time": 100,
+      "Description": null,
+      "CanEdit": false,
+      "Accepted": false
+    },
+    {
+      "Id": null,
+      "Date": "2021-11",
+      "Code": "BETA",
+      "Subcode": null,
+      "Time": 122,
+      "Description": null,
+      "CanEdit": false,
+      "Accepted": false
+    }
+  ],
+  "Date": "2021-11-01T00:00:00"
+}

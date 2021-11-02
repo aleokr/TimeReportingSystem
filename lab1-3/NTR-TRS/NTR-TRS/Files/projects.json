@@ -1,0 +1,82 @@
+[
+  {
+    "Code": "ALFA",
+    "Manager": "nowak",
+    "Budget": 1500,
+    "Active": false,
+    "Subprojects": [
+      {
+        "Code": "database"
+      },
+      {
+        "Code": "app"
+      }
+    ]
+  },
+  {
+    "Code": "BETA",
+    "Manager": "nowak",
+    "Budget": 2300,
+    "Active": true,
+    "Subprojects": [
+      {
+        "Code": "database"
+      },
+      {
+        "Code": "app"
+      }
+    ]
+  },
+  {
+    "Code": "GAMMA",
+    "Manager": "nowak",
+    "Budget": 2300,
+    "Active": true,
+    "Subprojects": [
+      {
+        "Code": "database"
+      },
+      {
+        "Code": "app"
+      }
+    ]
+  },
+  {
+    "Code": "DELTA",
+    "Manager": "kowalski",
+    "Budget": 1300,
+    "Active": false,
+    "Subprojects": null
+  },
+  {
+    "Code": "TARA",
+    "Manager": "kowalski",
+    "Budget": 321,
+    "Active": false,
+    "Subprojects": null
+  },
+  {
+    "Code": "Lala",
+    "Manager": "kowalski",
+    "Budget": 123,
+    "Active": false,
+    "Subprojects": null
+  },
+  {
+    "Code": "misja",
+    "Manager": "kowalski",
+    "Budget": 1233,
+    "Active": false,
+    "Subprojects": [
+      {
+        "Code": "small"
+      },
+      {
+        "Code": "big"
+      },
+      {
+        "Code": "bag"
+      }
+    ]
+  }
+]

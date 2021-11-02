@@ -1,0 +1,48 @@
+{
+  "Frozen": true,
+  "Entries": [
+    {
+      "Id": null,
+      "Date": "2021-11-07",
+      "Code": "GAMMA",
+      "Subcode": "database",
+      "Time": 45,
+      "Description": "data import",
+      "CanEdit": false,
+      "Accepted": false
+    },
+    {
+      "Id": null,
+      "Date": "2021-11-08",
+      "Code": "GAMMA",
+      "Subcode": "",
+      "Time": 120,
+      "Description": "picie kawy",
+      "CanEdit": false,
+      "Accepted": false
+    },
+    {
+      "Id": null,
+      "Date": "2021-11-08",
+      "Code": "BETA",
+      "Subcode": "",
+      "Time": 125,
+      "Description": "picie kawy",
+      "CanEdit": false,
+      "Accepted": true
+    }
+  ],
+  "Accepted": [
+    {
+      "Id": null,
+      "Date": "2021-09",
+      "Code": "BETA",
+      "Subcode": null,
+      "Time": 125,
+      "Description": null,
+      "CanEdit": false,
+      "Accepted": false
+    }
+  ],
+  "Date": "2021-09-01T00:00:00"
+}
