@@ -1,0 +1,42 @@
+.menuContainer {
+    position: relative;
+    height: inherit;
+    background: #ffff;
+    margin: auto;
+    width: 50%;
+    border: 1px solid rgb(101, 146, 101);
+    min-width: 1200px;
+    
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80%;
+}
+
+.navMenu a {
+    padding: 15px 15px;
+    color: #050505;
+    background: #ffff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10%;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-left: 20px;
+    min-width: 100px;
+}
+
+.navMenu a:hover {
+    background: #6fb183;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #d3bcbd,
+                0 0 25px #79be7f,
+                0 0 50px #4e794e;
+}
+

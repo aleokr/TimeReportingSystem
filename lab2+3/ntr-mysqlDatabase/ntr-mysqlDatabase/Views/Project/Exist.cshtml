@@ -1,0 +1,10 @@
+﻿@model ntr_mysqlDatabase.Data.Project
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+</head>
+<div class="main-body">
+    <h3>Project with code: @Model.Code already exists</h3>
+    <h3>Manager: @Model.Manager.Name @Model.Manager.Surname  </h3>
+    <a class="action-button" asp-area="" asp-controller="Report" asp-action="Projects">BACK TO PROJECTS</a>
+
+</div>

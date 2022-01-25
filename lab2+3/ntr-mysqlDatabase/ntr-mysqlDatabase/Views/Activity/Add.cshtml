@@ -1,0 +1,38 @@
+﻿@model ntr_mysqlDatabase.Models.AddActivityFormData
+<head>
+    <link rel="stylesheet" href="~/css/form.css" />
+</head>
+<div class="form-box">
+    <h2>Add activity</h2>
+    <form asp-controller="Activity" asp-action="Create" method="post">
+        <label>Date</label>
+        <div class="user-box">
+            <input class="date text-box single-line" type="date" text=@Model.Date asp-for="Activity.Date" required />
+        </div>
+        <label>Code</label>
+        <div class="select-box">
+            <select asp-for="Activity.Code">
+                @foreach (ProjectData project in Model.Projects)
+                {
+                    <option>@project.Code</option>
+                    @if (project.Subprojects != null)
+                    {
+                        @foreach (SubprojectData subproject in project.Subprojects)
+                        {
+                            <option>@project.Code, subproject: @subproject.Code</option>
+                        }
+                    }
+                }
+            </select>
+        </div>
+        <div class="user-box">
+            <input type="number" asp-for="Activity.Time" required />
+            <label>Time</label>
+        </div>
+        <div class="user-box">
+            <input type="text" asp-for="Activity.Description" />
+            <label>Description</label>
+        </div>
+        <button class="form-button" type="submit">Submit</button>
+    </form>
+</div>

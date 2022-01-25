@@ -1,0 +1,79 @@
+﻿@await Html.PartialAsync("../Shared/Menu.cshtml")
+@model IEnumerable<ntr_mysqlDatabase.Models.ProjectActivity>
+
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+</head>
+<div class="main-body">
+    <a class="action-button" asp-area="" asp-controller="Project" asp-action="Add">ADD NEW PROJECT</a>
+
+
+
+    @if (Model != null)
+    {
+        <h3>Your projects</h3>
+        <table class="styled-table">
+            @foreach (var project in Model)
+            {
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>@project.Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @if (project.Active)
+                            {
+                                <a class="action-button" asp-area="" asp-controller="Project" asp-action="Close" asp-route-code=@project.Code>CLOSE PROJECT</a>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Free Budget</td>
+                        <td>@project.Budget</td>
+                    </tr>
+                    <tr>
+                        <td>Users</td>
+                        <td>
+                            <table class="styled-table">
+                                <thead>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Time</th>
+                                        <th>Date</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var activity in project.Entries)
+                                    {
+                                        <tr>
+                                            <td>@activity.Name</td>
+                                            <td> @activity.Time</td>
+                                            <td>@activity.Date</td>
+                                            <td>
+                                                @if (!activity.CanEdit && !activity.Accepted)
+                                                {
+                                                    <a class="action-button" asp-area="" asp-controller="Activity" asp-action="Accept" asp-route-date=@activity.Date  asp-route-id=@activity.Id  asp-route-username=@activity.Name asp-route-time=@activity.Time asp-route-code=@project.Code>ACCEPT</a>
+                                                }
+                                                @if (activity.Accepted)
+                                                {
+                                                    <button class="inactive-button">ACCEPTED</button>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    }
+</div>

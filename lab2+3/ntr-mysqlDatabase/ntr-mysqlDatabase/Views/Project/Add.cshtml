@@ -1,0 +1,22 @@
+﻿@model ntr_mysqlDatabase.Models.ProjectFormData
+<head>
+    <link rel="stylesheet" href="~/css/form.css" />
+</head>
+<div class="form-box">
+    <h2>Add project</h2>
+    <form asp-controller="Project" asp-action="Create" method="post">
+        <div class="user-box">
+            <input asp-for="Code" type="text" required />
+            <label>Code</label>
+        </div>
+        <div class="user-box">
+            <input asp-for="SubCodes" type="text" />
+            <label>Subcodes(separated by comma)</label>
+        </div>
+        <div class="user-box">
+            <input asp-for="Budget" type="number" required />
+            <label>Budget</label>
+        </div>
+        <button class="form-button" type="submit">Submit</button>
+    </form>
+</div>

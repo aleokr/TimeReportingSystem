@@ -1,0 +1,30 @@
+﻿@model ntr_mysqlDatabase.Models.AcceptActivityFormData
+<head>
+    <link rel="stylesheet" href="~/css/form.css" />
+</head>
+<div class="form-box">
+    <h2>Accept activity</h2>
+    <form asp-controller="Activity" asp-action="Submit" method="post">
+        <label>Username</label>
+        <div class="user-box">
+            <input asp-for="Username" type="text" text="@Model.Username" readonly />
+        </div>
+        <div class="user-box">
+            <input asp-for="ActivityId" type="hidden" text="@Model.ActivityId" readonly />
+        </div>
+        <label>Project name</label>
+        <div class="user-box">
+            <input asp-for="Code" type="text" text="@Model.Code" readonly />
+        </div>
+        <label>Date</label>
+        <div class="user-box">
+            <input asp-for="Date" type="text" text="@Model.Date" readonly />
+        </div>
+        <div class="user-box">
+            <input asp-for="Time" type="number" text="@Model.Time" required />
+            <label>Time</label>
+        </div>
+        <button class="form-button" type="submit">Submit</button>
+    </form>
+</div>
+
